@@ -42,7 +42,6 @@ CREATE TABLE IF NOT EXISTS `school2`.`status` (
   `status_name` VARCHAR(45) NULL,
   PRIMARY KEY (`status_id`))
 ENGINE = InnoDB;
-DEFAULT CHARACTER SET = utf8mb4;
 
 
 -- -----------------------------------------------------
@@ -276,9 +275,8 @@ CREATE TABLE IF NOT EXISTS `school2`.`enroll_subject` (
     REFERENCES `school2`.`subject` (`subject_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4;
-
 
 -- -----------------------------------------------------
 -- Table `school2`.`time_table`
@@ -306,9 +304,8 @@ CREATE TABLE IF NOT EXISTS `school2`.`time_table` (
     REFERENCES `school2`.`enroll_subject` (`enroll_subject_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4;
-
 
 -- -----------------------------------------------------
 -- Table `school2`.`work`
@@ -327,9 +324,8 @@ CREATE TABLE IF NOT EXISTS `school2`.`work` (
     REFERENCES `school2`.`enroll_subject` (`enroll_subject_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4;
-
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
